@@ -1,29 +1,60 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * ATOM CRM brand palette (docs/atom-mobile-approvals-design-brief.md §4). Semantic colors
+ * carry over from the ATOM web app exactly, since users already read Pending/Won/Killed/Active
+ * by these hues.
  */
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+const tintColorLight = '#F26522';
+const tintColorDark = '#F26522';
+
+export const AtomColors = {
+  orange: '#F26522',
+  orangeWash: '#FDECE3',
+  pageGray: '#EEF1F5',
+  surface: '#FFFFFF',
+  ink: '#1F2733',
+  slate: '#6B7280',
+  hairline: '#E5E7EB',
+  pending: '#F5A623',
+  success: '#27AE60',
+  danger: '#E24B4A',
+  info: '#2D9CDB',
+};
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
+    text: AtomColors.ink,
+    textSecondary: AtomColors.slate,
+    background: AtomColors.pageGray,
+    surface: AtomColors.surface,
+    border: AtomColors.hairline,
     tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
+    tintWash: AtomColors.orangeWash,
+    icon: AtomColors.slate,
+    tabIconDefault: AtomColors.slate,
     tabIconSelected: tintColorLight,
+    pending: AtomColors.pending,
+    success: AtomColors.success,
+    danger: AtomColors.danger,
+    info: AtomColors.info,
   },
   dark: {
     text: '#ECEDEE',
+    textSecondary: '#9BA1A6',
     background: '#151718',
+    surface: '#1F2126',
+    border: '#2C2F33',
     tint: tintColorDark,
+    tintWash: '#3A2A22',
     icon: '#9BA1A6',
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
+    pending: AtomColors.pending,
+    success: AtomColors.success,
+    danger: AtomColors.danger,
+    info: AtomColors.info,
   },
 };
 
